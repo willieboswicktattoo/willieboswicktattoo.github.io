@@ -169,13 +169,15 @@ body {
   font-size: 0.88rem; color: var(--smoke);
   max-width: 420px; margin: 0 auto 2.5rem; line-height: 1.7;
 }
-.booking a {
+.booking-cta {
   display: inline-block; background: #fff; color: #000;
   text-decoration: none; padding: 0.9rem 2.8rem;
   font-size: 0.72rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase;
   transition: background 0.25s, color 0.25s;
 }
-.booking a:hover { background: var(--ash); color: #fff; }
+.booking-cta:hover { background: var(--ash); color: #fff; }
+.booking p a { color: var(--white); text-decoration: underline; }
+.booking p a:hover { color: var(--smoke); }
 
 /* FOOTER */
 footer {
