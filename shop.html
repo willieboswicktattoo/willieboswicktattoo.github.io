@@ -22,22 +22,7 @@
   <div class="shop-header">
     <h2>Shop</h2>
   </div>
-  <div class="shop-grid">
-    <div class="shop-card" onclick="openModal('images/art/art1.jpg', 'Art Print No. 1', '$30')">
-      <div class="shop-img"><img src="images/art/art1.jpg" alt="Art Print No. 1"/></div>
-      <div class="shop-info">
-        <span class="shop-name">Art Print No. 1</span>
-        <span class="shop-price">$30</span>
-      </div>
-    </div>
-    <div class="shop-card" onclick="openModal('images/art/art2.jpg', 'Art Print No. 2', '$30')">
-      <div class="shop-img"><img src="images/art/art2.jpg" alt="Art Print No. 2"/></div>
-      <div class="shop-info">
-        <span class="shop-name">Art Print No. 2</span>
-        <span class="shop-price">$30</span>
-      </div>
-    </div>
-  </div>
+  <div class="shop-grid"></div>
 </section>
 
 <!-- MODAL -->
@@ -60,15 +45,34 @@
 </footer>
 
 <script>
+async function loadShop() {
+  const res = await fetch('shop.json');
+  const items = await res.json();
+  const grid = document.querySelector('.shop-grid');
+
+  grid.innerHTML = items.map(item => `
+    <div class="shop-card" onclick="openModal('images/shop/${item.image}', '${item.name}', '${item.price}')">
+      <div class="shop-img"><img src="images/shop/${item.image}" alt="${item.name}"/></div>
+      <div class="shop-info">
+        <span class="shop-name">${item.name}</span>
+        <span class="shop-price">${item.price}</span>
+      </div>
+    </div>
+  `).join('');
+}
+
 function openModal(src, name, price) {
   document.getElementById('modal-img').src = src;
   document.getElementById('modal-name').textContent = name;
   document.getElementById('modal-price').textContent = price;
   document.getElementById('modal').style.display = 'flex';
 }
+
 function closeModal() {
   document.getElementById('modal').style.display = 'none';
 }
+
+loadShop();
 </script>
 </body>
 </html>

@@ -1,0 +1,12 @@
+[
+  {
+    "image": "ghost-print.jpg",
+    "name": "Ghost Print",
+    "price": "$30"
+  },
+  {
+    "image": "flash-sheet-1.jpg",
+    "name": "Flash Sheet 1",
+    "price": "$25"
+  }
+]
