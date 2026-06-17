@@ -1,12 +1,12 @@
 [
   {
-    "image": "ghost-print.jpg",
-    "name": "Ghost Print",
+    "image": "art1.jpg",
+    "name": "Art Print No. 1",
     "price": "$30"
   },
   {
-    "image": "flash-sheet-1.jpg",
-    "name": "Flash Sheet 1",
-    "price": "$25"
+    "image": "art2.jpg",
+    "name": "Art Print No. 2",
+    "price": "$30"
   }
 ]
