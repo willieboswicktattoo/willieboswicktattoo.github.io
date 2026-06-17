@@ -217,8 +217,9 @@ letter-spacing: 0.05em;
   margin-bottom: 1rem;
 }
 .booking p {
-  font-size: 1rem;  color: rgba(255,255,255,0.8);
-  font-weight: 450;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.1rem;  color: rgba(255,255,255,0.8);
+  font-weight: 400;
   max-width: 420px; margin: 0 auto 2.5rem; line-height: 1.7;
 }
 .booking-cta {
