@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Willie Boswick — Shop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<nav class="page-nav">
+  <a href="index.html" class="nav-logo">Willie Boswick</a>
+  <div class="nav-links">
+    <a href="tattoos.html">Tattoos</a>
+    <a href="shop.html">Shop</a>
+    <a href="index.html#booking">Contact</a>
+  </div>
+</nav>
+
+<section class="shop-section">
+  <div class="shop-header">
+    <h2>Shop</h2>
+  </div>
+  <div class="shop-grid">
+    <div class="shop-card" onclick="openModal('images/art/art1.jpg', 'Art Print No. 1', '$30')">
+      <div class="shop-img"><img src="images/art/art1.jpg" alt="Art Print No. 1"/></div>
+      <div class="shop-info">
+        <span class="shop-name">Art Print No. 1</span>
+        <span class="shop-price">$30</span>
+      </div>
+    </div>
+    <div class="shop-card" onclick="openModal('images/art/art2.jpg', 'Art Print No. 2', '$30')">
+      <div class="shop-img"><img src="images/art/art2.jpg" alt="Art Print No. 2"/></div>
+      <div class="shop-info">
+        <span class="shop-name">Art Print No. 2</span>
+        <span class="shop-price">$30</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal" onclick="closeModal()">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <img class="modal-img" id="modal-img" src="" alt=""/>
+    <div class="modal-details">
+      <h3 id="modal-name"></h3>
+      <p id="modal-price"></p>
+      <a href="#" class="modal-buy">Buy via PayPal</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">Willie Boswick Tattoos</div>
+  <div class="footer-address">Find me at <a href="https://www.electricchairportland.com">Electric Chair Tattoo</a> · 4179 SE Division St, Portland, OR 97202</div>
+  <div class="footer-copy">© 2026 · Portland, OR</div>
+</footer>
+
+<script>
+function openModal(src, name, price) {
+  document.getElementById('modal-img').src = src;
+  document.getElementById('modal-name').textContent = name;
+  document.getElementById('modal-price').textContent = price;
+  document.getElementById('modal').style.display = 'flex';
+}
+function closeModal() {
+  document.getElementById('modal').style.display = 'none';
+}
+</script>
+</body>
+</html>

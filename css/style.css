@@ -155,7 +155,7 @@ letter-spacing: 0.05em;
 }
 .tab {
   padding: 0.5rem 1.2rem;
-  font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+  font-size: 2rem; letter-spacing: 0.2em; text-transform: uppercase;
   color: var(--smoke); cursor: pointer; background: none;
   border: none; border-bottom: 2px solid transparent;
   margin-bottom: -1px; transition: color 0.2s, border-color 0.2s;
@@ -181,7 +181,32 @@ letter-spacing: 0.05em;
 }
 
 /* BOOKING */
-.booking { padding: 6rem 3rem; background: var(--dark); text-align: center; }
+.booking {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  padding: 6rem 3rem;
+  text-align: center;
+  position: relative;
+}
+.booking::after {
+  content: '';
+  position: absolute; inset: 0;
+background: url('../images/art/art1.jpg') center center / cover no-repeat;
+  filter: contrast(10) brightness(0.2) saturate(0);
+  z-index: 0;
+}
+.booking::before {
+  content: '';
+  position: absolute; inset: 0;
+  z-index: 1;
+  background: linear-gradient(to bottom, rgba(10,10,10,1) 0%, rgba(10,10,10,0.8) 15%, rgba(10,10,10,0.3) 30%, rgba(10,10,10,0) 50%, rgba(10,10,10,0.4) 70%, rgba(10,10,10,0.9) 85%, rgba(10,10,10,1) 95%);
+}
+.booking h2,
+.booking p,
+.booking a {
+  position: relative;
+  z-index: 2;
+}
 .booking h2 {
   font-family: 'Bebas Neue', sans-serif;
   font-size: clamp(2rem, 4vw, 3.5rem);
@@ -189,7 +214,7 @@ letter-spacing: 0.05em;
   margin-bottom: 1rem;
 }
 .booking p {
-  font-size: 0.88rem; color: var(--smoke);
+  font-size: 1rem;  color: rgba(255,255,255,0.8);
   max-width: 420px; margin: 0 auto 2.5rem; line-height: 1.7;
 }
 .booking-cta {
@@ -204,7 +229,7 @@ letter-spacing: 0.05em;
 
 /* FOOTER */
 footer {
-  background: var(--black); border-top: 1px solid var(--ash);
+  background: var(--black);
   padding: 2rem 3rem; display: flex; justify-content: space-between; align-items: center;
 }
 .footer-logo {
@@ -224,3 +249,92 @@ a { color: var(--white); text-decoration: underline; }
   .booking { padding: 4rem 1.5rem; }
   footer { flex-direction: column; gap: 1rem; text-align: center; }
 }
+
+.page-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  background: var(--black);
+  border-bottom: 1px solid var(--ash);
+}
+.nav-logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.1em;
+  color: #fff;
+  text-decoration: none;
+}
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+.nav-links a {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--smoke);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: #fff; }
+.shop-section { padding: 5rem 3rem; background: var(--black); }
+.shop-header { margin-bottom: 2.5rem; }
+.shop-header h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  letter-spacing: 0.05em;
+}
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 2rem; max-width: 1100px;
+}
+.shop-card {
+  cursor: pointer; background: var(--ash);
+  transition: transform 0.2s;
+}
+.shop-card:hover { transform: translateY(-4px); }
+.shop-img { aspect-ratio: 1/1; overflow: hidden; }
+.shop-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+.shop-card:hover .shop-img img { transform: scale(1.04); }
+.shop-info {
+  padding: 1rem;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.shop-name { font-size: 0.85rem; color: #fff; }
+.shop-price { font-size: 0.85rem; color: var(--smoke); }
+
+/* MODAL */
+.modal-overlay {
+  display: none;
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.85);
+  z-index: 100;
+  align-items: center; justify-content: center;
+}
+.modal-box {
+  background: var(--dark);
+  max-width: 500px; width: 90%;
+  position: relative;
+}
+.modal-close {
+  position: absolute; top: 1rem; right: 1rem;
+  background: none; border: none; color: #fff;
+  font-size: 1rem; cursor: pointer;
+}
+.modal-img { width: 100%; display: block; }
+.modal-details { padding: 1.5rem; }
+.modal-details h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem; letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+.modal-details p { color: var(--smoke); font-size: 0.9rem; margin-bottom: 1.5rem; }
+.modal-buy {
+  display: inline-block; background: #fff; color: #000;
+  text-decoration: none; padding: 0.6rem 2rem;
+  font-size: 0.72rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase;
+  transition: background 0.25s, color 0.25s;
+}
+.modal-buy:hover { background: var(--ash); color: #fff; }
