@@ -56,7 +56,7 @@ async function loadGallery() {
     if (e.key === 'Escape') closeLightbox();
   });
 
-  render('all');
+  render('tattoos');
 
   document.querySelectorAll('.tab').forEach(tab => {
     tab.addEventListener('click', () => {
