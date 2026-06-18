@@ -5,7 +5,6 @@ async function loadGallery() {
   const all = [
     ...data.tattoos.map(src => ({ src, category: 'tattoos' })),
     ...data.flash.map(src => ({ src, category: 'flash' })),
-    ...data.art.map(src => ({ src, category: 'art' })),
   ];
 
   const grid = document.querySelector('.gallery-grid');

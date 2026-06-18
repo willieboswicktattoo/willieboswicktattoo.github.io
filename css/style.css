@@ -194,7 +194,7 @@ letter-spacing: 0.05em;
 .booking::after {
   content: '';
   position: absolute; inset: 0;
-background: url('../images/art/art1.jpg') center center / cover no-repeat;
+background: url('../images/site/art1.jpg') center center / cover no-repeat;
   filter: contrast(10) brightness(0.2) saturate(0);
   z-index: 0;
 }

@@ -33,7 +33,15 @@
     <div class="modal-details">
       <h3 id="modal-name"></h3>
       <p id="modal-price"></p>
-      <a href="#" class="modal-buy">Buy via PayPal</a>
+      <form id="modal-paypal-form" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="ADD_YOUR_PAYPAL_EMAIL@gmail.com">
+        <input type="hidden" name="currency_code" value="USD">
+        <input type="hidden" name="no_shipping" value="2">
+        <input type="hidden" id="paypal-item-name" name="item_name" value="">
+        <input type="hidden" id="paypal-amount" name="amount" value="">
+        <button type="submit" class="modal-buy">Buy via PayPal</button>
+      </form>
     </div>
   </div>
 </div>
@@ -51,11 +59,11 @@ async function loadShop() {
   const grid = document.querySelector('.shop-grid');
 
   grid.innerHTML = items.map(item => `
-    <div class="shop-card" onclick="openModal('images/shop/${item.image}', '${item.name}', '${item.price}')">
+    <div class="shop-card" onclick="openModal('images/shop/${item.image}', '${item.name}', ${item.price})">
       <div class="shop-img"><img src="images/shop/${item.image}" alt="${item.name}"/></div>
       <div class="shop-info">
         <span class="shop-name">${item.name}</span>
-        <span class="shop-price">${item.price}</span>
+        <span class="shop-price">$${item.price}</span>
       </div>
     </div>
   `).join('');
@@ -64,7 +72,9 @@ async function loadShop() {
 function openModal(src, name, price) {
   document.getElementById('modal-img').src = src;
   document.getElementById('modal-name').textContent = name;
-  document.getElementById('modal-price').textContent = price;
+  document.getElementById('modal-price').textContent = '$' + price;
+  document.getElementById('paypal-item-name').value = name;
+  document.getElementById('paypal-amount').value = price;
   document.getElementById('modal').style.display = 'flex';
 }
 

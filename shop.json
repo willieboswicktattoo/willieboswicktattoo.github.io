@@ -2,11 +2,11 @@
   {
     "image": "art1.jpg",
     "name": "Art Print No. 1",
-    "price": "$30"
+    "price": 30
   },
   {
     "image": "art2.jpg",
     "name": "Art Print No. 2",
-    "price": "$30"
+    "price": 30
   }
 ]
