@@ -506,3 +506,40 @@ a { color: var(--white); text-decoration: underline; }
   position: fixed; bottom: 1.2rem; left: 50%; transform: translateX(-50%);
   font-size: 0.7rem; letter-spacing: 0.2em; color: rgba(255,255,255,0.4);
 }
+/* CONTACT BAR */
+.contact-bar {
+  background: var(--dark);
+  border-top: 1px solid var(--ash);
+  border-bottom: 1px solid var(--ash);
+  padding: 1.2rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+}
+.contact-bar-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--smoke);
+  text-decoration: none;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+.contact-bar-item:hover { color: #fff; }
+.contact-bar-divider {
+  width: 1px;
+  height: 1.2rem;
+  background: var(--ash);
+}
+
+@media (max-width: 768px) {
+  .contact-bar {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.2rem 1.5rem;
+  }
+  .contact-bar-divider { width: 2rem; height: 1px; }
+}
