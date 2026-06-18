@@ -11,7 +11,10 @@
 
 <nav class="page-nav">
   <a href="index.html" class="nav-logo">Willie Boswick</a>
-  <div class="nav-links">
+  <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links" id="nav-links">
     <a href="tattoos.html">Tattoos</a>
     <a href="shop.html">Shop</a>
     <a href="index.html#booking">Contact</a>
@@ -81,7 +84,10 @@ function openModal(src, name, price) {
 function closeModal() {
   document.getElementById('modal').style.display = 'none';
 }
-
+function toggleMenu() {
+  document.getElementById('nav-links').classList.toggle('open');
+  document.querySelector('.nav-hamburger').classList.toggle('open');
+}
 loadShop();
 </script>
 </body>

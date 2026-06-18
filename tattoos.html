@@ -11,7 +11,10 @@
 
 <nav class="page-nav">
   <a href="index.html" class="nav-logo">Willie Boswick</a>
-  <div class="nav-links">
+  <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links" id="nav-links">
     <a href="tattoos.html">Tattoos</a>
     <a href="shop.html">Shop</a>
     <a href="index.html#booking">Contact</a>
@@ -45,5 +48,11 @@
 </footer>
 
 <script src="js/tattoos.js"></script>
+<script>
+function toggleMenu() {
+  document.getElementById('nav-links').classList.toggle('open');
+  document.querySelector('.nav-hamburger').classList.toggle('open');
+}
+</script>
 </body>
 </html>
