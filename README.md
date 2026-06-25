@@ -7,7 +7,7 @@
 1. Go to **https://github.com/willieboswicktattoo/willieboswicktattoo.github.io**
 2. Click `images` → then `tattoos` or `flash`
 3. Click **Add file** → **Upload files**
-4. Drag your photo in
+4. Drag or select photo
 5. Click **Commit changes**
 
 `gallery.json` updates automatically. The site will reflect your new photo in **1-2 minutes**.
