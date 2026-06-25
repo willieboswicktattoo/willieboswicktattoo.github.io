@@ -21,10 +21,6 @@ jobs:
           echo '  "flash": [' >> images/gallery.json
           files=$(ls images/flash/*.{jpg,jpeg,png,webp} 2>/dev/null | sed 's/^/    "/' | sed 's/$/"/' | paste -sd ',')
           echo "$files" >> images/gallery.json
-          echo '  ],' >> images/gallery.json
-          echo '  "art": [' >> images/gallery.json
-          files=$(ls images/art/*.{jpg,jpeg,png,webp} 2>/dev/null | sed 's/^/    "/' | sed 's/$/"/' | paste -sd ',')
-          echo "$files" >> images/gallery.json
           echo '  ]' >> images/gallery.json
           echo '}' >> images/gallery.json
 
