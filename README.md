@@ -1,4 +1,3 @@
-<img width="605" height="227" alt="image" src="https://github.com/user-attachments/assets/96f475ef-37e4-4833-b6c7-ab7eec26c3c5" /># Willie Boswick Tattoos
 
 🌐 **Live site: https://willieboswicktattoo.github.io**
 
