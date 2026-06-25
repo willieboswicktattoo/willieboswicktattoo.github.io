@@ -18,39 +18,68 @@ Check the **Actions** tab — green checkmark ✅ means it's live.
 ---
 
 ## Adding a Shop Item
-
-Shop items are managed in `shop.json` at the root of the repo.
-
+ 
+This takes two steps — uploading the photo, then adding the item details.
+ 
 ### Step 1 — Upload the photo
-1. Go to `images/shop/`
-2. Click **Add file** → **Upload files**
-3. Upload your photo (e.g. `print1.jpg`)
-4. Commit
-
-### Step 2 — Add it to shop.json
-1. Click `shop.json` in the repo root
-2. Click the **pencil icon** to edit
-3. Add a new entry inside the `[` `]` brackets:
-
-```json
+ 
+1. Go to **https://github.com/willieboswicktattoo/willieboswicktattoo.github.io**
+2. Click `images` → click `shop`
+3. Click **Add file** → **Upload files**
+4. Drag your photo in
+5. Make note of the exact file name (e.g. `coolprint.jpg`)
+6. Click the green **Commit changes** button
+---
+ 
+### Step 2 — Add the item details
+ 
+1. Go back to the main repo page
+2. Click the file called **`shop.json`**
+3. Click the **pencil icon** ✏️ in the top right to edit it
+You'll see something like this:
+ 
+```
 [
   {
-    "image": "print1.jpg",
-    "name": "Name of the item",
+    "image": "art1.jpg",
+    "name": "Art Print No. 1",
+    "price": 30
+  }
+]
+```
+ 
+4. Click after the last `}` and before the `]`, and add a comma and a new item:
+```
+[
+  {
+    "image": "art1.jpg",
+    "name": "Art Print No. 1",
     "price": 30
   },
   {
-    "image": "print2.jpg",
-    "name": "Another item",
+    "image": "coolprint.jpg",
+    "name": "Name of your new item",
     "price": 45
   }
 ]
 ```
-
+ 
+> ⚠️ Important:
+> - The `"image"` name must **exactly match** the file you uploaded in Step 1
+> - `"price"` should be a number only — **no $ sign** (e.g. `45` not `"$45"`)
+> - Every item except the last one needs a **comma** after the `}`
+ 
+5. Click the green **Commit changes** button
+Your new item will appear in the shop right away!
+ 
+---
+ 
+## Removing a Shop Item
+ 
+1. Click **`shop.json`** → click the pencil icon ✏️
+2. Delete the entire block for that item (from `{` to `}`)
+3. Make sure there's no trailing comma after the last remaining item
 4. Click **Commit changes**
-
-The shop updates immediately — no wait needed.
-
 ---
 
 ## Tips
