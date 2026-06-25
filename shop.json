@@ -8,5 +8,10 @@
     "image": "art2.jpg",
     "name": "Art Print No. 2",
     "price": 30
+  },
+    {
+    "image": "test_item.jpg",
+    "name": "Test Item",
+    "price": 100
   }
 ]
