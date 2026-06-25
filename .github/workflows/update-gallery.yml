@@ -32,6 +32,7 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
+          git checkout -- .
           git pull origin main --rebase
           git add images/gallery.json
           git diff --staged --quiet || git commit -m "Auto-update gallery.json"
