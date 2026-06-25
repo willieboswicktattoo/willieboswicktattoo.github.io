@@ -1,15 +1,8 @@
 {
   "tattoos": [
-    "images/tattoos/tattoo1.jpg",
-    "images/tattoos/tattoo2.jpg",
-    "images/tattoos/tattoo3.jpg",
-    "images/tattoos/tattoo4.jpg",
-    "images/tattoos/tattoo5.jpg",
-    "images/tattoos/tattoo6.jpg"
+    "images/tattoos/tattoo1.jpg",    "images/tattoos/tattoo2.jpg",    "images/tattoos/tattoo3.jpg",    "images/tattoos/tattoo4.jpg",    "images/tattoos/tattoo5.jpg",    "images/tattoos/tattoo6.jpg"
   ],
   "flash": [
-    "images/flash/flash1.jpg",
-    "images/flash/flash2.jpg",
-    "images/flash/flash3.jpg"
+    "images/flash/flash1.jpg",    "images/flash/flash2.jpg",    "images/flash/flash3.jpg"
   ]
 }
